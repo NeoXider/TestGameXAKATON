@@ -13,11 +13,11 @@ public static class OpenWindowsOnLoad
 public class WelcomeWindow : EditorWindow
 {
     const string WindowTitle = "Algoritmika";
-    const string doc = "https://docs.google.com/document/d/1oNgSP7tc48sc3GuITt-M9-cc-JzJlb-_RPO_0XkyX0k/edit?tab=t.nkxniar8a393";
+    const string doc = "https://docs.google.com/document/d/13k8E2dV7hx1O1AMT57Us45TQypasuFRg84IRfL02EBQ/edit?tab=t.0";
     Texture imageAlgo, imageNeo;
     string imageNameNeo = "SlimeNeoxider";
     string imageNameAlgo = "Algoritmika";
-    bool initialized = false;
+    static bool initialized = false;
 
     [MenuItem("Tools/Algoritmika")]
     public static void ShowWindow()
