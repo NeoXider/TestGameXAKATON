@@ -6,7 +6,11 @@ public static class OpenWindowsOnLoad
 {
     static OpenWindowsOnLoad()
     {
-        EditorApplication.delayCall += WelcomeWindow.OpenWindow;
+        if (!EditorPrefs.GetBool("WelcomNeo", false))
+        {
+            EditorApplication.delayCall += WelcomeWindow.OpenWindow;
+            EditorPrefs.SetBool("WelcomNeo", true);
+        }
     }
 }
 
@@ -22,7 +26,9 @@ public class WelcomeWindow : EditorWindow
     [MenuItem("Tools/Algoritmika")]
     public static void ShowWindow()
     {
+
         GetWindow<WelcomeWindow>("Welcome");
+
     }
 
     public static void OpenWindow()
